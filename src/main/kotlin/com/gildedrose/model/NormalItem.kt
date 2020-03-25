@@ -7,6 +7,9 @@ import com.gildedrose.base.BaseItem
  */
 data class NormalItem(private val item: Item) : BaseItem(item) {
     override fun updateQuality() {
+        if (item.quality <= minQuality) {
+            return
+        }
         val sellIn = item.sellIn
         when {
             sellIn > 0 -> item.quality--

@@ -38,4 +38,15 @@ class NormalItemTest {
         // assert
         assertEquals(3, item.quality)
     }
+
+    @Test
+    fun `should not decrease the quality when it already drops to 0`() {
+        // setup
+        val item = Item(Fixture.tNormalItemName, 4, 0)
+        val normalItem = NormalItem(item)
+        // act
+        normalItem.updateQuality()
+        // assert
+        assertEquals(0, item.quality)
+    }
 }
