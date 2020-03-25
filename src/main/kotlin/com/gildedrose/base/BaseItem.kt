@@ -18,4 +18,12 @@ abstract class BaseItem(private val item: Item) {
     protected open fun updateSellIn() {
         item.sellIn -= 1
     }
+
+    protected open fun ensureGoodQuality(quality: Int): Int {
+        return when {
+            quality > maxQuality -> maxQuality
+            quality < minQuality -> minQuality
+            else -> quality
+        }
+    }
 }
