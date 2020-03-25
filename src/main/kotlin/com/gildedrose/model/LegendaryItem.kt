@@ -9,10 +9,10 @@ data class LegendaryItem(private val item: Item) : BaseItem(item) {
     override val maxQuality: Int = 80
 
     override fun updateQuality() {
-        TODO("Not yet implemented")
+        /* Do nothing */
     }
 
     override fun updateSellIn() {
-        TODO("Not yet implemented")
+        /* Do nothing */
     }
 }
