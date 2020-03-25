@@ -7,10 +7,17 @@ import com.gildedrose.base.BaseItem
  */
 data class ConjuredItem(private val item: Item) : BaseItem(item) {
     override fun updateQuality() {
-        TODO("Not yet implemented")
+        if (item.quality <= minQuality) {
+            return
+        }
+        val sellIn = item.sellIn
+        when {
+            sellIn > 0 -> item.quality -= 2
+            else -> item.quality -= 4
+        }
     }
 
     override fun updateSellIn() {
-        TODO("Not yet implemented")
+        item.sellIn--
     }
 }
