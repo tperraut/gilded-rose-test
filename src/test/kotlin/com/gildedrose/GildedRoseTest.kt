@@ -1,6 +1,7 @@
 package com.gildedrose
 
-import org.junit.Assert.*
+import com.gildedrose.model.Item
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class GildedRoseTest {

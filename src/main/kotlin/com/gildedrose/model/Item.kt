@@ -1,4 +1,4 @@
-package com.gildedrose
+package com.gildedrose.model
 
 open class Item(var name: String, var sellIn: Int, var quality: Int) {
     override fun toString(): String {
