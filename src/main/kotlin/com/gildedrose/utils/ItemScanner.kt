@@ -1,9 +1,10 @@
 package com.gildedrose.utils
 
 import com.gildedrose.base.BaseItem
+import com.gildedrose.base.IScanner
 import com.gildedrose.model.*
 
-object ItemScanner {
+object ItemScanner : IScanner {
 
     private val catalog: Map<String, (item: Item) -> BaseItem> = mapOf(
             "Sulfuras, Hand of Ragnaros" to ::LegendaryItem,
@@ -12,7 +13,7 @@ object ItemScanner {
             "Backstage passes to a TAFKAL80ETC concert" to ::BackStageItem
     )
 
-    fun scan(item: Item): BaseItem {
+    override fun scan(item: Item): BaseItem {
         val mapper = catalog[item.name]
         return mapper?.invoke(item) ?: NormalItem(item)
     }
