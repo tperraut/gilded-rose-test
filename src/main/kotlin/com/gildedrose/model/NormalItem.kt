@@ -3,9 +3,9 @@ package com.gildedrose.model
 import com.gildedrose.base.BaseItem
 
 /**
- * Conjured items degrade in quality twice as fast as [NormalItem]
+ * Normal items decreases by one in quality every day and by 2 after the sale by date has passed
  */
-data class ConjuredItem(private val item: Item) : BaseItem(item) {
+data class NormalItem(private val item: Item) : BaseItem(item) {
     override fun updateQuality() {
         TODO("Not yet implemented")
     }
