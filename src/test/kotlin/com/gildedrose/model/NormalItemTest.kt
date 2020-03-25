@@ -12,7 +12,7 @@ class NormalItemTest {
         val item = Item(Fixture.tNormalItemName, 4, 5)
         val normalItem = NormalItem(item)
         // act
-        normalItem.updateQuality()
+        normalItem.update()
         // assert
         assertEquals(4, item.quality)
     }
@@ -23,7 +23,7 @@ class NormalItemTest {
         val item = Item(Fixture.tNormalItemName, 0, 5)
         val normalItem = NormalItem(item)
         // act
-        normalItem.updateQuality()
+        normalItem.update()
         // assert
         assertEquals(3, item.quality)
     }
@@ -34,7 +34,7 @@ class NormalItemTest {
         val item = Item(Fixture.tNormalItemName, -4, 5)
         val normalItem = NormalItem(item)
         // act
-        normalItem.updateQuality()
+        normalItem.update()
         // assert
         assertEquals(3, item.quality)
     }
@@ -45,18 +45,18 @@ class NormalItemTest {
         val item = Item(Fixture.tNormalItemName, 4, 0)
         val normalItem = NormalItem(item)
         // act
-        normalItem.updateQuality()
+        normalItem.update()
         // assert
         assertEquals(0, item.quality)
     }
 
     @Test
-    fun `should decrease the item sellIn value by one when updateSellIn method is called`() {
+    fun `should decrease the item sellIn value by one when update method is called`() {
         // setup
         val item = Item(Fixture.tNormalItemName, 4, 5)
         val normalItem = NormalItem(item)
         // act
-        normalItem.updateSellIn()
+        normalItem.update()
         // assert
         assertEquals(3, item.sellIn)
     }
