@@ -18,6 +18,6 @@ data class NormalItem(private val item: Item) : BaseItem(item) {
     }
 
     override fun updateSellIn() {
-        TODO("Not yet implemented")
+        item.sellIn--
     }
 }
