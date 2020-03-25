@@ -7,10 +7,15 @@ import com.gildedrose.base.BaseItem
  */
 data class BackStageItem(private val item: Item) : BaseItem(item) {
     override fun updateQuality() {
-        TODO("Not yet implemented")
-    }
-
-    override fun updateSellIn() {
-        TODO("Not yet implemented")
+        if (item.quality <= minQuality) {
+            return
+        }
+        val sellIn = item.sellIn
+        when {
+            sellIn > 10 -> item.quality++
+            sellIn > 5 -> item.quality += 2
+            sellIn > 0 -> item.quality += 3
+            else -> item.quality = 0
+        }
     }
 }
