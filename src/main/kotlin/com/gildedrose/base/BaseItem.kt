@@ -15,5 +15,7 @@ abstract class BaseItem(private val item: Item) {
     }
 
     protected abstract fun updateQuality()
-    protected abstract fun updateSellIn()
+    protected open fun updateSellIn() {
+        item.sellIn -= 1
+    }
 }

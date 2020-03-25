@@ -16,8 +16,4 @@ data class NormalItem(private val item: Item) : BaseItem(item) {
             else -> item.quality -= 2
         }
     }
-
-    override fun updateSellIn() {
-        item.sellIn--
-    }
 }

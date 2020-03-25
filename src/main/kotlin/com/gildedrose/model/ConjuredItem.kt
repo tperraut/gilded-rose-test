@@ -16,8 +16,4 @@ data class ConjuredItem(private val item: Item) : BaseItem(item) {
             else -> item.quality -= 4
         }
     }
-
-    override fun updateSellIn() {
-        item.sellIn--
-    }
 }
