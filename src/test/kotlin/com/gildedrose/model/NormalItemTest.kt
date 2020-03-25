@@ -16,4 +16,26 @@ class NormalItemTest {
         // assert
         assertEquals(4, item.quality)
     }
+
+    @Test
+    fun `should decrease the quality by 2 when the sellIn value is equal to 0`() {
+        // setup
+        val item = Item(Fixture.tNormalItemName, 0, 5)
+        val normalItem = NormalItem(item)
+        // act
+        normalItem.updateQuality()
+        // assert
+        assertEquals(3, item.quality)
+    }
+
+    @Test
+    fun `should decrease the quality by 2 when the sellIn value is lesser than 0`() {
+        // setup
+        val item = Item(Fixture.tNormalItemName, -4, 5)
+        val normalItem = NormalItem(item)
+        // act
+        normalItem.updateQuality()
+        // assert
+        assertEquals(3, item.quality)
+    }
 }
