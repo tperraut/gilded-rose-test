@@ -62,6 +62,17 @@ class AgedBrieItemTest {
     }
 
     @Test
+    fun `should not increase the item quality value when its quality value is equal to 50`() {
+        // setup
+        val item = Item(Fixture.tAgedBrieItemName, -4, 50)
+        val normalItem = AgedBrieItem(item)
+        // act
+        normalItem.update()
+        // assert
+        assertEquals(50, item.quality)
+    }
+
+    @Test
     fun `should decrease the item sellIn value by one when update method is called`() {
         // setup
         val item = Item(Fixture.tAgedBrieItemName, 4, 5)

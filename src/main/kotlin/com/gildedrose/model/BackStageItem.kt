@@ -7,7 +7,7 @@ import com.gildedrose.base.BaseItem
  */
 data class BackStageItem(private val item: Item) : BaseItem(item) {
     override fun updateQuality() {
-        if (item.quality <= minQuality) {
+        if (item.quality <= minQuality || item.quality >= maxQuality) {
             return
         }
         val sellIn = item.sellIn

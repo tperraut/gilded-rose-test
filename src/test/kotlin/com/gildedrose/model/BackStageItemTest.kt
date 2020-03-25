@@ -62,6 +62,17 @@ class BackStageItemTest {
     }
 
     @Test
+    fun `should not increase the item quality value when its quality value is 50`() {
+        // setup
+        val item = Item(Fixture.tAgedBrieItemName, 2, 50)
+        val normalItem = BackStageItem(item)
+        // act
+        normalItem.update()
+        // assert
+        assertEquals(50, item.quality)
+    }
+
+    @Test
     fun `should drop the item quality value to 0 when its sellIn value is equal to 0`() {
         // setup
         val item = Item(Fixture.tAgedBrieItemName, 0, 5)
