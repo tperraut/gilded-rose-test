@@ -1,0 +1,10 @@
+language: java
+sudo: false
+before_script:
+  - chmod u+x gradlew
+script:
+  - ./gradlew clean
+  - ./gradlew check
+  - ./gradlew build
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
