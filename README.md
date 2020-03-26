@@ -3,20 +3,20 @@ This repo is a Kotlin refactor of [GildedRose-Refactoring-Kata](https://github.c
 
 ## How to build
 
-Use the command `./gradlew build`.
+Use the command `./gradlew build`. After that You can find the file `gilded-rose-test.jar` in the `build/libs` folder
 
 ## How to use
 
 Use the command `./gradlew test` to run the tests.
 
-You can also import the `.jar` file available in the build forlder as a lib in your Java or Kotlin project and create a
+You can also import the `.jar` file available in the build folder as a lib in your Java or Kotlin project and create a
 custom main to test it.
 
 Another solution is to clone the project, open it with Intellij or any other IDE that can deal with Kotlin and use the
 test main inside TexttestFixture provided in the kata base.
 
 > Note : I did not provide any main file myself as this kata is refactoring exercise, I did it with a TDD approach and
-> used the provided main.
+> used the provided test main.
 
 ## License
 
