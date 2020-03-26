@@ -1,4 +1,6 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/tperraut/gilded-rose-test?branch=master)](https://bettercodehub.com/)
+[![codecov](https://codecov.io/gh/tperraut/gilded-rose-test/branch/master/graph/badge.svg)](https://codecov.io/gh/tperraut/gilded-rose-test)
+[![Build Status](https://travis-ci.com/tperraut/gilded-rose-test.svg?branch=master)](https://travis-ci.com/tperraut/gilded-rose-test)
 
 # gilded-rose-test
 This repo is a Kotlin refactor of [GildedRose-Refactoring-Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata)
