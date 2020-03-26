@@ -1,5 +1,7 @@
 package com.gildedrose
 
+import com.gildedrose.model.Item
+
 fun main(args: Array<String>) {
 
     println("OMGHAI!")
@@ -12,7 +14,6 @@ fun main(args: Array<String>) {
             Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
             Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
             Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
-            // this conjured item does not work properly yet
             Item("Conjured Mana Cake", 3, 6))
 
     val app = GildedRose(items)
@@ -31,6 +32,4 @@ fun main(args: Array<String>) {
         println()
         app.updateQuality()
     }
-
-
 }
