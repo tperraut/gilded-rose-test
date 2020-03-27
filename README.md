@@ -7,7 +7,7 @@ This repo is a Kotlin refactor of [GildedRose-Refactoring-Kata](https://github.c
 
 ## How to build
 
-Use the command `./gradlew build`. After that You can find the file `gilded-rose-test.jar` in the `build/libs` folder
+Use the command `./gradlew build`. After that you can find the file `gilded-rose-test.jar` in the `build/libs` folder
 
 ## How to use
 
