@@ -73,7 +73,7 @@ class BackStageItemTest {
     }
 
     @Test
-    fun `should set the item quality value to when its quality value exceed 50 during the update process`() {
+    fun `should set the item quality value to 50 when its quality value exceed 50 during the update process`() {
         // setup
         val item = Item(Fixture.tBackStageItemName, 2, 49)
         val normalItem = BackStageItem(item)
