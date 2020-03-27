@@ -10,9 +10,9 @@ class ConjuredItemTest {
     fun `should decrease the item quality value by 2 when its sellIn value is greater than 0`() {
         // setup
         val item = Item(Fixture.tConjuredItemName, 4, 5)
-        val normalItem = ConjuredItem(item)
+        val conjuredItem = ConjuredItem(item)
         // act
-        normalItem.update()
+        conjuredItem.update()
         // assert
         assertEquals(3, item.quality)
     }
@@ -21,9 +21,9 @@ class ConjuredItemTest {
     fun `should decrease the item quality value by 4 when its sellIn value is equal to 0`() {
         // setup
         val item = Item(Fixture.tConjuredItemName, 0, 5)
-        val normalItem = ConjuredItem(item)
+        val conjuredItem = ConjuredItem(item)
         // act
-        normalItem.update()
+        conjuredItem.update()
         // assert
         assertEquals(1, item.quality)
     }
@@ -32,9 +32,9 @@ class ConjuredItemTest {
     fun `should decrease the item quality value by 4 when its sellIn value is lesser than 0`() {
         // setup
         val item = Item(Fixture.tConjuredItemName, -4, 5)
-        val normalItem = ConjuredItem(item)
+        val conjuredItem = ConjuredItem(item)
         // act
-        normalItem.update()
+        conjuredItem.update()
         // assert
         assertEquals(1, item.quality)
     }
@@ -43,9 +43,9 @@ class ConjuredItemTest {
     fun `should not decrease the item quality value when it has already dropped to 0`() {
         // setup
         val item = Item(Fixture.tConjuredItemName, 4, 0)
-        val normalItem = ConjuredItem(item)
+        val conjuredItem = ConjuredItem(item)
         // act
-        normalItem.update()
+        conjuredItem.update()
         // assert
         assertEquals(0, item.quality)
     }
@@ -54,9 +54,9 @@ class ConjuredItemTest {
     fun `should decrease the item sellIn value by one when update method is called`() {
         // setup
         val item = Item(Fixture.tConjuredItemName, 4, 5)
-        val normalItem = ConjuredItem(item)
+        val conjuredItem = ConjuredItem(item)
         // act
-        normalItem.update()
+        conjuredItem.update()
         // assert
         assertEquals(3, item.sellIn)
     }
