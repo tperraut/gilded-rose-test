@@ -7,9 +7,9 @@ import org.junit.Test
 class AgedBrieItemTest {
 
     @Test
-    fun `should increase the item quality value by one when its sellIn value is greater than 10`() {
+    fun `should increase the item quality value by one when its sellIn value is greater than 0`() {
         // setup
-        val item = Item(Fixture.tAgedBrieItemName, 11, 5)
+        val item = Item(Fixture.tAgedBrieItemName, 14, 5)
         val agedBrieItem = AgedBrieItem(item)
         // act
         agedBrieItem.update()
@@ -18,47 +18,25 @@ class AgedBrieItemTest {
     }
 
     @Test
-    fun `should increase the item quality value by 2 when its sellIn value is equal to 10`() {
+    fun `should increase the item quality value by one when its sellIn value is equal to 0`() {
         // setup
-        val item = Item(Fixture.tAgedBrieItemName, 10, 5)
+        val item = Item(Fixture.tAgedBrieItemName, 0, 5)
         val agedBrieItem = AgedBrieItem(item)
         // act
         agedBrieItem.update()
         // assert
-        assertEquals(7, item.quality)
+        assertEquals(6, item.quality)
     }
 
     @Test
-    fun `should increase the item quality value by 2 when its sellIn value is lower than 10 and greater than 5`() {
-        // setup
-        val item = Item(Fixture.tAgedBrieItemName, 7, 5)
-        val agedBrieItem = AgedBrieItem(item)
-        // act
-        agedBrieItem.update()
-        // assert
-        assertEquals(7, item.quality)
-    }
-
-    @Test
-    fun `should increase the item quality value by 3 when its sellIn value is equal to 5`() {
-        // setup
-        val item = Item(Fixture.tAgedBrieItemName, 5, 5)
-        val agedBrieItem = AgedBrieItem(item)
-        // act
-        agedBrieItem.update()
-        // assert
-        assertEquals(8, item.quality)
-    }
-
-    @Test
-    fun `should increase the item quality value by 3 when its sellIn value is lower than 5`() {
+    fun `should increase the item quality value by one when its sellIn value is lower than 0`() {
         // setup
         val item = Item(Fixture.tAgedBrieItemName, -4, 5)
         val agedBrieItem = AgedBrieItem(item)
         // act
         agedBrieItem.update()
         // assert
-        assertEquals(8, item.quality)
+        assertEquals(6, item.quality)
     }
 
     @Test
