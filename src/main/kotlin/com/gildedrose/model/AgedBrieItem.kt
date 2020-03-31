@@ -7,12 +7,7 @@ import com.gildedrose.base.BaseItem
  */
 data class AgedBrieItem(private val item: Item) : BaseItem(item) {
     override fun updateQuality() {
-        val sellIn = item.sellIn
-        val quality = when {
-            sellIn > 10 -> item.quality + 1
-            sellIn > 5 -> item.quality + 2
-            else -> item.quality + 3
-        }
+        val quality = item.quality + 1
         item.quality = ensureGoodQuality(quality)
     }
 }
