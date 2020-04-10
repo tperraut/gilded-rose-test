@@ -7,10 +7,10 @@ import com.gildedrose.utils.ItemScanner
 
 class GildedRose(
         items: Array<Item>,
-        scanner: IScanner = ItemScanner
+        scanner: IScanner = ItemScanner()
 ) {
 
-    private val scannedItems: List<BaseItem> = items.map(scanner::scan)
+    private val scannedItems: List<BaseItem> by lazy { items.map(scanner::scan) }
 
     fun updateQuality() {
         scannedItems.forEach(BaseItem::update)

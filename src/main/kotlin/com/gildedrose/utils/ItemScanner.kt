@@ -4,7 +4,7 @@ import com.gildedrose.base.BaseItem
 import com.gildedrose.base.IScanner
 import com.gildedrose.model.*
 
-object ItemScanner : IScanner {
+class ItemScanner : IScanner {
 
     private val catalog: Map<String, (item: Item) -> BaseItem> = mapOf(
             "Sulfuras, Hand of Ragnaros" to ::LegendaryItem,

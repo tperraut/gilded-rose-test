@@ -11,7 +11,7 @@ class ItemScannerTest {
         // setup
         val item = Item(Fixture.tNormalItemName, 4, 5)
         // act
-        val normalItem = ItemScanner.scan(item)
+        val normalItem = ItemScanner().scan(item)
         // assert
         assert(normalItem is NormalItem)
     }
@@ -21,7 +21,7 @@ class ItemScannerTest {
         // setup
         val item = Item(Fixture.tAgedBrieItemName, 4, 5)
         // act
-        val normalItem = ItemScanner.scan(item)
+        val normalItem = ItemScanner().scan(item)
         // assert
         assert(normalItem is AgedBrieItem)
     }
@@ -31,7 +31,7 @@ class ItemScannerTest {
         // setup
         val item = Item(Fixture.tBackStageItemName, 4, 5)
         // act
-        val normalItem = ItemScanner.scan(item)
+        val normalItem = ItemScanner().scan(item)
         // assert
         assert(normalItem is BackStageItem)
     }
@@ -41,7 +41,7 @@ class ItemScannerTest {
         // setup
         val item = Item(Fixture.tConjuredItemName, 4, 5)
         // act
-        val normalItem = ItemScanner.scan(item)
+        val normalItem = ItemScanner().scan(item)
         // assert
         assert(normalItem is ConjuredItem)
     }
@@ -51,7 +51,7 @@ class ItemScannerTest {
         // setup
         val item = Item(Fixture.tLegendaryItemName, 4, 5)
         // act
-        val normalItem = ItemScanner.scan(item)
+        val normalItem = ItemScanner().scan(item)
         // assert
         assert(normalItem is LegendaryItem)
     }
