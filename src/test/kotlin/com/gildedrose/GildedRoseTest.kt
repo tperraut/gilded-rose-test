@@ -8,13 +8,14 @@ import org.junit.Test
 class GildedRoseTest {
 
     @Test
-    fun `should scan all items when GildedRose is created`() {
+    fun `should scan all items when updateQuality method is called`() {
         // setup
         val itemScannerMock = mock<IScanner>() {
-            on { scan(any()) } doReturn any()
+            on { scan(any()) } doReturn mock()
         }
+        val app = GildedRose(Fixture.tItems, itemScannerMock)
         // act
-        GildedRose(Fixture.tItems, itemScannerMock)
+        app.updateQuality()
         // assert
         verify(itemScannerMock, times(Fixture.tItems.size)).scan(any())
     }
